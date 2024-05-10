@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortest Path Finder</title>
+    <script src="PASTE YOUR API HERE"></script>
+</head>
+<body>
+    <div id="map" style="height: 400px;"></div>
+    <div id="directionsPanel"></div>
+    <a id="googleMapsLink" href="https://www.google.com/maps" target="_blank" style="display: block; margin-top: 10px;">View Directions on Google Maps</a>
+
+    <script>
+        const originCoords = '28.5036218,77.049855'; 
+        const waypoint1Coords = '28.4878629874115, 77.09301856969185';
+        const waypoint2Coords = '28.479576824345234, 77.08011040266086';
+        const destinationCoords = '28.500744,77.0671461';
+        
+        const googleMapsLink = document.getElementById('googleMapsLink');
+        
+        googleMapsLink.href = `https://www.google.com/maps/dir/?api=1&origin=${originCoords}&waypoints=${waypoint1Coords}|${waypoint2Coords}&destination=${destinationCoords}&travelmode=driving`;
+    </script>
+</body>
+</html>
